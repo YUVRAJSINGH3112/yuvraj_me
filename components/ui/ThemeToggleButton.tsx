@@ -28,7 +28,7 @@ const Skiper4 = () => {
           <ThemeToggleButton1 className={cn("size-12")} />
         </motion.div>
         <motion.div layout>
-          <ThemeToggleButton2 className={cn("size-12 p-2")} />
+          <ThemeToggleButton className={cn("size-12 p-2")} />
         </motion.div>
         <motion.div layout>
           <ThemeToggleButton3 className={cn("size-12 p-2")} />
