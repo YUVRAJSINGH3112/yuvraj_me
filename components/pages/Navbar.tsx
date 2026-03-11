@@ -3,7 +3,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { ThemeToggleButton } from "@/components/ui/ThemeToggleButton"
-import { Menu, X, Home, BriefcaseBusiness, Contact2 } from "lucide-react"  
+import { Menu, X, Home, BriefcaseBusiness, Contact2,Code } from "lucide-react"  
 import { motion, AnimatePresence } from "framer-motion"
 import {
   DropdownMenu,
@@ -77,7 +77,7 @@ export default function Navbar() {
       </DropdownMenuTrigger>
 
 
-      <DropdownMenuContent className="w-40" align="end">
+      <DropdownMenuContent className="w-40 bg-gray-900" align="end">
 
         <DropdownMenuGroup>
 
@@ -92,6 +92,12 @@ export default function Navbar() {
             <Link href="/projects" className="flex items-center gap-2">
               <BriefcaseBusiness className="h-8 w-8"/>
               Projects
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <Link href="/coding-stats" className="flex items-center gap-2">
+              <Code className="h-8 w-8"/>
+              Coding Stats
             </Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>
