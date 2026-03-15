@@ -35,7 +35,7 @@ interface Project {
     <section className="bg-black h-full lg:px-90">
         <div className="mt-6">
             <h4 className="text-white/50 leading-none">Featured</h4>
-            <h2 className="text-white text-3xl leading-tight">PROJECTS</h2>
+            <h2 className="text-white text-3xl font-extrabold leading-tight">PROJECTS</h2>
         </div>
         <div className="">
           {projects.map((project,idx) =>{
