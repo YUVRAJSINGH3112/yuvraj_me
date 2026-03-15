@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Mail, MapPin } from "lucide-react"
+import { Mail, MapPin,Send } from "lucide-react"
 
 export default function Contact() {
   return (
@@ -18,46 +18,44 @@ export default function Contact() {
             <h2 className="text-white text-3xl font-extrabold leading-tight">CONTACT</h2>
         </div>
         <div className="flex flex-col gap-4 sm:flex-row">
-            <Card className="mx-auto w-full max-w-sm">
+            <Card className="mx-auto w-full max-w-sm bg-[#171717]">
                 <CardHeader>
-                    <CardTitle>CONTACT ME</CardTitle>
-                    <CardDescription>
+                    <CardTitle className="text-xl font-extrabold text-white">CONTACT ME</CardTitle>
+                    <CardDescription className="text-white/70">
                      Feel free to reach out for collaborations, hackathons, or just to connect! I'm always excited to work on innovative projects.
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <div className="flex flex-col gap-2">
-                        <div className="flex items-center gap-2"><Mail size={15}/> yuvrajsingh3112s@gmail.com</div>
+                    <div className="flex flex-col gap-2 text-white">
+                        <div className="flex items-center gap-2"><Mail size={15}/> <p>yuvrajsingh3112s@gmail.com</p></div>
                         <div className="flex items-center gap-2"><Mail size={15}/> +91 9555103969</div>
                         <div className="flex items-center gap-2"><MapPin size={15}/> Lucknow, Uttar Pradesh</div>
                     </div>
                 </CardContent>
-                <CardFooter>
-                    <Button variant="outline" size="sm" className="w-full">
-                        Send Message
+                <CardFooter className="bg-[#171717]">
+                    <Button variant="outline" className="w-full bg-white text-black">
+                        <Send size={15}/> Send Message
                     </Button>
                 </CardFooter>
             </Card>
-            <Card className="mx-auto w-full max-w-sm">
+            <Card className="mx-auto w-full max-w-sm bg-[#171717]">
                 <CardHeader>
-                    <CardTitle>LET'S CONNECT</CardTitle>
-                    <CardDescription>
+                    <CardTitle className="text-xl font-extrabold text-white">LET'S CONNECT</CardTitle>
+                    <CardDescription className="text-white/70">
                     I'm always interested in hearing about new opportunities, collaborations, or just having a chat about technology and development!
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
-                   <div>
+                   <div className=" text-white">
                     Available for:
-                    <ul>
+                    <ul className="list-disc pl-5 mb-4">
                         <li>Freelance projects</li>
                         <li>Full-time opportunities</li>
                         <li>Technical collaborations</li>
                         <li>Hackathon partnerships</li>
                     </ul>
-                    Response time:
-                    Usually within 24 hours
-                    Preferred contact:
-                    Email or LinkedIn messages
+                    <p>Response time: Usually within 24 hours</p>
+                    <p>Preferred contact: Email or LinkedIn messages</p>
                    </div>
                 </CardContent>
             </Card>

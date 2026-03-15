@@ -1,5 +1,6 @@
 'use client'
 import React,{useEffect, useState} from 'react'
+import avatar from "@/public/images/avatar.png"
 import { projectList } from '@/data/projects'
 import {
   Card,
@@ -12,6 +13,7 @@ import {
 } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import Image from "next/image"
 export default function Projects() {
 
 interface Project {
@@ -40,26 +42,39 @@ interface Project {
         <div className="">
           {projects.map((project,idx) =>{
             return (
-    <Card className="bg-[#171717] relative mx-auto w-full max-w-sm pt-0 mt-4" key={idx}>
-      <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
-      <img
-        src="https://avatar.vercel.sh/shadcn1"
-        alt="Event cover"
-        className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
-      />
-      <CardHeader>
-        <CardAction>
-          <Badge variant="secondary">Featured</Badge>
-        </CardAction>
-        <CardTitle>Design systems meetup</CardTitle>
-        <CardDescription>
-          A practical talk on component APIs, accessibility, and shipping
-          faster.
-        </CardDescription>
-      </CardHeader>
-                       <CardFooter>
-                          <Button className="w-full">View Event</Button>
-                       </CardFooter>
+                     <Card className="bg-[#171717] mx-auto w-full max-w-sm pt-0 mt-4">
+
+                     <div className="relative aspect-video">
+    <Image
+      src={avatar}
+      alt="Event cover"
+      fill
+      placeholder="blur"
+      className="object-cover"
+    />
+
+                     </div>
+
+                     <CardHeader>
+                     <CardAction>
+      <Badge variant="secondary" className='bg-blue-400'>Featured</Badge>
+                     </CardAction>
+
+      <CardTitle className="text-xl font-extrabold text-white">
+      {project.title}
+      </CardTitle>
+
+    <CardDescription className="text-white/70">
+      {project.description}
+    </CardDescription>
+  </CardHeader>
+
+  <CardFooter className="bg-[#171717]">
+    <Button className="w-full bg-white text-black text-md py-4">
+      View on Github
+    </Button>
+  </CardFooter>
+
                     </Card>
                    )
           })}

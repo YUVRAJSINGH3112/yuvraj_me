@@ -1,5 +1,6 @@
 import { MapPin } from "lucide-react"
 import {Button} from "../ui/button";
+import Link from "next/link"
 import {Linkedin, Github, Mail,Send,FileText} from "lucide-react"
 
 export default function Hero() {
@@ -20,12 +21,17 @@ export default function Hero() {
       <div className="badge mt-2 grid gap-2 grid-cols-[repeat(auto-fit,minmax(160px,1fr))]">
       
         <Button className="mb-2 py-5 text-md"><FileText />Download CV</Button>
-        <Button className="mb-2 py-5 bg-white text-black text-md"><Send />Get in Touch</Button>
+        <Button asChild className="mb-2 py-5 bg-white text-black text-md">
+          <Link href="/contact">
+            <Send />
+            Get in Touch
+          </Link>
+        </Button>
 
         <div className="flex items-center gap-2" id="socials">
-          <Button className="mb-2 py-6 px-4 rounded-full"><Linkedin size={30}/></Button>
-          <Button className="mb-2 py-6 px-4 rounded-full"><Github size={30}/></Button>
-          <Button className="mb-2 py-6 px-4 rounded-full"><Mail size={30}/></Button>
+          <Button className="mb-2 py-6 px-4 rounded-full hover:bg-blue-500 transition-all ease-in duration-300"><Linkedin size={30}/></Button>
+          <Button className="mb-2 py-6 px-4 rounded-full hover:bg-blue-500 transition-all ease-in duration-300"><Github size={30}/></Button>
+          <Button className="mb-2 py-6 px-4 rounded-full hover:bg-blue-500 transition-all ease-in duration-300"><Mail size={30}/></Button>
         </div>
 
       </div>
