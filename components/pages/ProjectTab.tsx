@@ -3,7 +3,7 @@ import { BriefcaseBusiness, DollarSign } from "lucide-react"
 
 export default function ProjectTab() {
   return (
-    <Tabs defaultValue="personal"  >
+    <Tabs defaultValue="personal">
       <TabsList className="self-center rounded-sm mt-2" >
         <TabsTrigger value="personal" className="rounded-sm">
           <BriefcaseBusiness />

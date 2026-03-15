@@ -1,6 +1,6 @@
 import { MapPin } from "lucide-react"
-import { SiReact, SiNextdotjs, SiExpress, SiPython } from "react-icons/si";
-import Badge from "../ui/badge"
+import {Button} from "../ui/button";
+import {Linkedin, Github, Mail} from "lucide-react"
 
 export default function Hero() {
   return (
@@ -11,17 +11,23 @@ export default function Hero() {
          </div>
       <div>
         <h1 className="text-3xl font-bold tracking-tighter">YUVRAJ SINGH</h1>
-        <h2 className="text-xl font-semibold text-blue-400 uppercase tracking-tight">SOFTWARE DEVELOPER</h2>
+        <h2 className="text-lg font-semibold text-blue-400 uppercase tracking-tight">SOFTWARE DEVELOPER</h2>
         <p className="flex items-center gap-1 text-md"><MapPin size={10}/>Lucknow, Uttar Pradesh</p>
       </div>
       </div>
       
       <p className='text-white/70 text-md text-center '>Aspiring software developer with a strong foundation in programming and a passion for creating innovative solutions. Currently pursuing a Bachelor's degree in Computer Science, I am eager to apply my knowledge and skills to real-world projects and contribute to the tech industry.</p>
       <div className="badge mt-2 grid gap-2 grid-cols-[repeat(auto-fit,minmax(160px,1fr))]">
-        <Badge icon={<SiReact size={12} />}>React</Badge>
-        <Badge icon={<SiNextdotjs size={12} />}>Next.js</Badge>
-        <Badge icon={<SiExpress size={12} />}>Express</Badge>
-        <Badge icon={<SiPython size={12} />}>Python</Badge>
+      
+        <Button className="mb-2 py-4">Download CV</Button>
+        <Button className="mb-2 py-4 bg-white text-black">Get in Touch</Button>
+
+        <div className="flex items-center gap-2" id="socials">
+          <Button className="mb-2 py-4"><Linkedin /></Button>
+          <Button className="mb-2 py-4"><Github /></Button>
+          <Button className="mb-2 py-4"><Mail /></Button>
+        </div>
+
       </div>
     </section>
   )
