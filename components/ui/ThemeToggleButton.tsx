@@ -5,6 +5,7 @@ import { GripHorizontal, RefreshCcw } from "lucide-react";
 import React, { useState } from "react";
 
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 
 const Skiper4 = () => {
   const [scale, setScale] = useState(0);
@@ -198,7 +199,8 @@ export const ThemeToggleButton= ({
 }: {
   className?: string;
 }) => {
-  const [isDark, setIsDark] = useState(false);
+  const { theme, setTheme } = useTheme()
+  const isDark = theme === "dark"
   return (
     <button
       type="button"
@@ -207,7 +209,7 @@ export const ThemeToggleButton= ({
         isDark ? "bg-black text-white" : "bg-white text-black",
         className,
       )}
-      onClick={() => setIsDark(!isDark)}
+      onClick={() => setTheme(isDark ? "light" : "dark")}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -14,39 +14,39 @@ export default function Contact() {
   return (
     <section className="my-10">
         <div className="mt-10 mb-6">
-            <h4 className="text-white/50 leading-none">Get in</h4>
-            <h2 className="text-white text-3xl font-extrabold leading-tight">CONTACT</h2>
+            <h4 className="leading-none">Get in</h4>
+            <h2 className="text-3xl font-extrabold leading-tight">CONTACT</h2>
         </div>
         <div className="flex flex-col gap-4 sm:flex-row">
-            <Card className="mx-auto w-full max-w-sm bg-[#171717]">
+            <Card className="mx-auto w-full max-w-sm">
                 <CardHeader>
-                    <CardTitle className="text-xl font-extrabold text-white">CONTACT ME</CardTitle>
-                    <CardDescription className="text-white/70">
+                    <CardTitle className="text-xl font-extrabold">CONTACT ME</CardTitle>
+                    <CardDescription className="">
                      Feel free to reach out for collaborations, hackathons, or just to connect! I'm always excited to work on innovative projects.
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <div className="flex flex-col gap-2 text-white">
+                    <div className="flex flex-col gap-2">
                         <div className="flex items-center gap-2"><Mail size={15}/> <p>yuvrajsingh3112s@gmail.com</p></div>
                         <div className="flex items-center gap-2"><Mail size={15}/> +91 9555103969</div>
                         <div className="flex items-center gap-2"><MapPin size={15}/> Lucknow, Uttar Pradesh</div>
                     </div>
                 </CardContent>
-                <CardFooter className="bg-[#171717]">
-                    <Button variant="outline" className="w-full bg-white text-black">
+                <CardFooter>
+                    <Button className="w-full">
                         <Send size={15}/> Send Message
                     </Button>
                 </CardFooter>
             </Card>
-            <Card className="mx-auto w-full max-w-sm bg-[#171717]">
+            <Card className="mx-auto w-full max-w-sm">
                 <CardHeader>
-                    <CardTitle className="text-xl font-extrabold text-white">LET'S CONNECT</CardTitle>
-                    <CardDescription className="text-white/70">
+                    <CardTitle className="text-xl font-extrabold">LET'S CONNECT</CardTitle>
+                    <CardDescription className="">
                     I'm always interested in hearing about new opportunities, collaborations, or just having a chat about technology and development!
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
-                   <div className=" text-white">
+                   <div className="">
                     Available for:
                     <ul className="list-disc pl-5 mb-4">
                         <li>Freelance projects</li>

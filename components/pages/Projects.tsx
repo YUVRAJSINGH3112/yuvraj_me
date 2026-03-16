@@ -1,5 +1,5 @@
 'use client'
-import React,{useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
 import avatar from "@/public/images/avatar.png"
 import { projectList } from '@/data/projects'
 import {
@@ -14,6 +14,8 @@ import {
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
+import { ArrowRight } from "lucide-react"
+
 export default function Projects() {
 
 interface Project {
@@ -34,15 +36,15 @@ interface Project {
   }, []);
 
   return (
-    <section className="bg-black h-full lg:px-90">
+    <section className="h-full lg:px-90">
         <div className="mt-6">
-            <h4 className="text-white/50 leading-none">Featured</h4>
-            <h2 className="text-white text-3xl font-extrabold leading-tight">PROJECTS</h2>
+            <h4 className="leading-none">Featured</h4>
+            <h2 className="text-3xl font-extrabold leading-tight">PROJECTS</h2>
         </div>
         <div className="">
           {projects.map((project,idx) =>{
             return (
-                     <Card className="bg-[#171717] mx-auto w-full max-w-sm pt-0 mt-4">
+                     <Card className="mx-auto w-full max-w-sm pt-0 mt-4" key={idx}>
 
                      <div className="relative aspect-video">
     <Image
@@ -60,18 +62,18 @@ interface Project {
       <Badge variant="secondary" className='bg-blue-400'>Featured</Badge>
                      </CardAction>
 
-      <CardTitle className="text-xl font-extrabold text-white">
+      <CardTitle className="text-xl font-extrabold">
       {project.title}
       </CardTitle>
 
-    <CardDescription className="text-white/70">
+    <CardDescription className="">
       {project.description}
     </CardDescription>
   </CardHeader>
 
-  <CardFooter className="bg-[#171717]">
-    <Button className="w-full bg-white text-black text-md py-4">
-      View on Github
+  <CardFooter className="">
+    <Button className="w-full text-md py-4">
+      View on Github<ArrowRight />
     </Button>
   </CardFooter>
 
@@ -80,7 +82,7 @@ interface Project {
           })}
         </div>
        <div className="flex items-center justify-center">
-        <Button className="mt-4 w-3/5 py-4">View All Projects</Button>
+        <Button className="mt-4 w-3/5 py-4">View All Projects <ArrowRight /></Button>
        </div>
     </section>
   )

@@ -36,7 +36,7 @@ export default function Navbar() {
         <div
           onClick={() => setIsOpen(!isOpen)}
           className="h-10 w-10 flex items-center justify-center 
-          bg-white/5 border border-white/10 rounded-lg 
+          bg-secondary border border-white/10 rounded-lg 
           cursor-pointer hover:bg-white/15 transition-all active:scale-95"
         >
 
@@ -56,7 +56,7 @@ export default function Navbar() {
                 exit={{ rotate: 90, opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.25 }}
               >
-                <X size={22} className="text-white/80" />
+                <X size={22} className="text-primary" />
               </motion.div>
             ) : (
               <motion.div
@@ -66,7 +66,7 @@ export default function Navbar() {
                 exit={{ rotate: -90, opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.25 }}
               >
-                <Menu size={22} className="text-white/80" />
+                <Menu size={22} className="text-primary" />
               </motion.div>
             )}
 

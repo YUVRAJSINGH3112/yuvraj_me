@@ -10,7 +10,7 @@ import Footer from "@/components/pages/Footer"
 import Hero from "@/components/pages/Hero"
 export default function page() {
   return (
-    <div className="bg-black h-full lg:px-90">
+    <div className= "h-full lg:px-90 bg-background">
       <Navbar/>
       <div className="p-4">
          <Hero/>
