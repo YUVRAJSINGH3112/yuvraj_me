@@ -1,5 +1,5 @@
 'use client'
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 import avatar from "@/public/images/avatar.png"
 import { projectList } from '@/data/projects'
 import {
@@ -14,20 +14,21 @@ import {
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
+import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 export default function Projects() {
 
-interface Project {
-  title: string;
-  description: string;
-  image: string;
-  github: string;
-  live: string;
-  type: string;
-  tags?: string[];
-  isFeatured?: boolean;
-}
+  interface Project {
+    title: string;
+    description: string;
+    image: string;
+    github: string;
+    live: string;
+    type: string;
+    tags?: string[];
+    isFeatured?: boolean;
+  }
 
   const [projects, setProjects] = useState<Project[]>([]);
 
@@ -37,53 +38,54 @@ interface Project {
 
   return (
     <section className="h-full lg:px-90">
-        <div className="mt-6">
-            <h4 className="leading-none">Featured</h4>
-            <h2 className="text-3xl font-extrabold leading-tight">PROJECTS</h2>
-        </div>
-        <div className="">
-          {projects.map((project,idx) =>{
-            return (
-                     <Card className="mx-auto w-full max-w-sm pt-0 mt-4" key={idx}>
+      <div className="mt-6">
+        <h4 className="leading-none text-muted-foreground">Featured</h4>
+        <h2 className="text-3xl font-extrabold leading-tight">PROJECTS</h2>
+      </div>
+      <div className="">
+        {projects.map((project, idx) => {
+          return (
+            <Card className="mx-auto w-full max-w-sm pt-0 mt-4" key={idx}>
 
-                     <div className="relative aspect-video">
-    <Image
-      src={avatar}
-      alt="Event cover"
-      fill
-      placeholder="blur"
-      className="object-cover"
-    />
+              <div className="relative aspect-video">
+                <Image
+                  src={avatar}
+                  alt="Event cover"
+                  fill
+                  placeholder="blur"
+                  className="object-cover"
+                />
 
-                     </div>
+              </div>
 
-                     <CardHeader>
-                     <CardAction>
-      <Badge variant="secondary" className='bg-blue-400'>Featured</Badge>
-                     </CardAction>
+              <CardHeader>
+                <CardAction>
+                  <Badge variant="secondary" className='bg-blue-400 border border-neutral-400'>Featured</Badge>
+                </CardAction>
 
-      <CardTitle className="text-xl font-extrabold">
-      {project.title}
-      </CardTitle>
+                <CardTitle className="text-xl font-extrabold">
+                  {project.title}
+                </CardTitle>
 
-    <CardDescription className="">
-      {project.description}
-    </CardDescription>
-  </CardHeader>
+                <CardDescription className="">
+                  {project.description}
+                </CardDescription>
+              </CardHeader>
 
-  <CardFooter className="">
-    <Button className="w-full text-md py-4">
-      View on Github<ArrowRight />
-    </Button>
-  </CardFooter>
+              <CardFooter className="">
+                <Button asChild className="w-full text-md py-4">
+                  <Link href={`/projects/${project.title}`}> View Details<ArrowRight /></Link>
+                </Button>
+              </CardFooter>
 
-                    </Card>
-                   )
-          })}
-        </div>
-       <div className="flex items-center justify-center">
-        <Button className="mt-4 w-3/5 py-4">View All Projects <ArrowRight /></Button>
-       </div>
+            </Card>
+          )
+        })}
+      </div>
+      <div className="flex items-center justify-center">
+        <Button asChild className="mt-4 py-5 px-4"><Link href="/projects">
+        View All Projects <ArrowRight /></Link></Button>
+      </div>
     </section>
   )
 }

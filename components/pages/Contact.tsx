@@ -9,12 +9,13 @@ import {
 } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Mail, MapPin,Send } from "lucide-react"
+import Link from "next/link"
 
 export default function Contact() {
   return (
     <section className="my-10">
         <div className="mt-10 mb-6">
-            <h4 className="leading-none">Get in</h4>
+            <h4 className="leading-none text-muted-foreground">Get in</h4>
             <h2 className="text-3xl font-extrabold leading-tight">CONTACT</h2>
         </div>
         <div className="flex flex-col gap-4 sm:flex-row">
@@ -33,8 +34,8 @@ export default function Contact() {
                     </div>
                 </CardContent>
                 <CardFooter>
-                    <Button className="w-full">
-                        <Send size={15}/> Send Message
+                    <Button asChild className="w-full">
+                        <Link href="/contact"><Send size={15}/> Send Message</Link>
                     </Button>
                 </CardFooter>
             </Card>
