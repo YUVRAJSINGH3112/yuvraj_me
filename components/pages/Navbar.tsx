@@ -26,10 +26,12 @@ export default function Navbar() {
                     backdrop-blur-xl
                     transition-all duration-300">
 
-      <Avatar className="h-10 w-10 ring-1 ring-white/10">
-        <AvatarImage src="/images/avatar.png" alt="Avatar" />
-        <AvatarFallback>YS</AvatarFallback>
-      </Avatar>
+      <Link href="/">
+        <Avatar className="h-10 w-10 ring-1 ring-white/10">
+          <AvatarImage src="/images/avatar.png" alt="Avatar" />
+          <AvatarFallback>YS</AvatarFallback>
+        </Avatar>
+      </Link>
 
       <div className="flex items-center gap-3">
 

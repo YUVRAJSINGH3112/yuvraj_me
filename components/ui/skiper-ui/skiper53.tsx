@@ -11,26 +11,27 @@ import { cn } from "@/lib/utils";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
+  CardAction,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { ExternalLink } from "lucide-react"
+import Link from "next/link"
 
 const Skiper53 = () => {
   const images = [
     {
-      src: "/images/x.com/13.jpeg",
+      src: "https://leetcode.com/u/yuvrajsingh3112/",
       alt: "LeetCode",
       code: "# 23",
     },
     {
-      src: "/images/x.com/9.jpeg",
+      src: "https://github.com/YUVRAJSINGH3112",
       alt: "GitHub",
       code: "# 23",
     },
     {
-      src: "/images/x.com/20.jpeg",
+      src: "https://www.hackerrank.com/profile/yuvrajsingh3112s",
       alt: "HackerRank",
       code: "# 23",
     },
@@ -74,10 +75,10 @@ const HoverExpand_002 = ({
           {images.map((image, index) => (
             <motion.div
               key={index}
-              className="group relative cursor-pointer overflow-hidden rounded-3xl"
+              className="group relative cursor-pointer overflow-hidden rounded-xl"
               initial={{ height: "2.5rem", width: "24rem" }}
               animate={{
-                height: activeImage === index ? "24rem" : "2.5rem",
+                height: activeImage === index ? "24rem" : "3rem",
               }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
               onClick={() => setActiveImage(index)}
@@ -109,13 +110,14 @@ const HoverExpand_002 = ({
                 )}
               </AnimatePresence>
 
-              {/* 🔥 IMAGE → CARD REPLACED */}
-              <Card className="w-full border-0 p-4">
+              <Card className="w-full h-full border-0 p-4">
                 <CardHeader>
                   <CardTitle className="">{image.alt}</CardTitle>
-                  <CardDescription>
-                    This card uses the small size variant.
-                  </CardDescription>
+                  <CardAction>
+                    <Link href={image.src} className="text-muted-foreground">
+                    <ExternalLink size={20}/>
+                    </Link>
+                  </CardAction>
                 </CardHeader>
                 <CardContent className="h-full">
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit laboriosam ratione, magni corporis natus neque inventore, officiis id aperiam consectetur hic excepturi, explicabo commodi animi quas? Ipsam aliquid velit nostrum!</p>
