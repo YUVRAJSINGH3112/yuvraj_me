@@ -31,7 +31,11 @@ export default function Hero() {
 
       <p className="text-md text-center my-4 text-muted-foreground">Aspiring software developer with a strong foundation in programming and a passion for creating innovative solutions. Currently pursuing a Bachelor's degree in Computer Science, I am eager to apply my knowledge and skills to real-world projects and contribute to the tech industry.</p>
       <div className="badge mt-2 grid gap-2 grid-cols-[repeat(auto-fit,minmax(160px,1fr))]">
-        <Button variant="outline" className="mb-2 py-5 text-md border border-neutral-600 cursor-pointer"><FileText />Download CV</Button>
+        <Button asChild variant="outline" className="mb-2 py-5 text-md border border-neutral-600 cursor-pointer">
+          <a href="/new_resume_yuvraj.pdf" target="_blank" rel="noopener noreferrer">
+            <FileText /> View CV
+          </a>
+        </Button>
         <Button asChild className="mb-2 py-5 text-md dark:bg-white">
           <Link href="/contact">
             <Send />
@@ -78,7 +82,10 @@ export default function Hero() {
             <SiTypescript /> TypeScript
           </Button>
         </div>
-        <Button className="mx-auto flex items-center gap-2 mt-6 py-5 px-4">Show All Skills <ArrowRight /></Button>
+        <div className="flex items-center justify-center">
+        <Button asChild className="mt-4 py-5 px-8"><Link href="/skills">
+        Show all Skills <ArrowRight /></Link></Button>
+      </div>
       </div>
     </section>
   )
