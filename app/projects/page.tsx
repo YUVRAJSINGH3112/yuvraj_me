@@ -17,6 +17,9 @@ import {
 } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import {ArrowRight} from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
 
 export default function () {
   return (
@@ -26,33 +29,49 @@ export default function () {
         <h4 className="text-muted-foreground font-bold leading-none">Featured</h4>
         <h2 className="text-3xl font-extrabold leading-tight">PROJECTS</h2>
         <ProjectTab />
-        {
-          projectList.map((project, idx) => {
-            return (
-              <Card className="relative mx-auto w-full max-w-sm pt-0 mt-4" key={idx}>
-                <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
-                <img
-                  src="https://avatar.vercel.sh/shadcn1"
-                  alt="Event cover"
-                  className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
-                />
-                <CardHeader>
-                  <CardAction>
-                    <Badge variant="secondary">Featured</Badge>
-                  </CardAction>
-                  <CardTitle>Design systems meetup</CardTitle>
-                  <CardDescription>
-                    A practical talk on component APIs, accessibility, and shipping
-                    faster.
-                  </CardDescription>
-                </CardHeader>
-                <CardFooter>
-                  <Button className="w-full">View Event</Button>
-                </CardFooter>
-              </Card>
-            )
-          })
-        }
+        <div className=" my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+          {
+            projectList.map((project, idx) => {
+              return (
+                <Card className="mx-auto w-full max-w-sm pt-0 mt-4 flex flex-col h-full" key={idx}>
+                
+                              <div className="relative aspect-video">
+                                <Image
+                                  src={project.image}
+                                  alt={project.title}
+                                  fill
+                                  className="object-cover grayscale dark:brightness-70 brightness-100 hover:grayscale-0 hover:brightness-100
+                                  hover:scale-[1.05]
+                                  transition-all duration-500 "
+                                />
+                
+                              </div>
+                
+                              <CardHeader>
+                                <CardAction>
+                                  <Badge variant="secondary" className='bg-blue-400 border border-neutral-400'>{project.type}</Badge>
+                                </CardAction>
+                
+                                <CardTitle className="text-xl font-extrabold">
+                                  {project.title}
+                                </CardTitle>
+                
+                                <CardDescription className="">
+                                  {project.description}
+                                </CardDescription>
+                              </CardHeader>
+                
+                              <CardFooter className="mt-auto">
+                                <Button asChild className="w-full text-md py-4">
+                                  <Link href={`/projects/${project.slug}`}> View Details<ArrowRight /></Link>
+                                </Button>
+                              </CardFooter>
+                
+                            </Card>
+              )
+            })
+          }
+        </div>
       </div>
     </section>
   )
