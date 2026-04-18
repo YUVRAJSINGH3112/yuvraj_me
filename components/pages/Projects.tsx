@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import avatar from "@/public/images/avatar.png"
+import travel from '@/public/images/travel.webp'
 import { projectList } from '@/data/projects'
 import {
   Card,
@@ -21,6 +21,7 @@ export default function Projects() {
 
   interface Project {
     title: string;
+    slug:string;
     description: string;
     image: string;
     github: string;
@@ -37,22 +38,21 @@ export default function Projects() {
   }, []);
 
   return (
-    <section className="h-full lg:px-90">
+    <section className="h-full">
       <div className="mt-6">
         <h4 className="leading-none text-muted-foreground">Featured</h4>
         <h2 className="text-3xl font-extrabold leading-tight">PROJECTS</h2>
       </div>
-      <div className="">
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
         {projects.map((project, idx) => {
           return (
-            <Card className="mx-auto w-full max-w-sm pt-0 mt-4" key={idx}>
+            <Card className="mx-auto w-full h-full max-w-sm pt-0 flex flex-col" key={idx}>
 
               <div className="relative aspect-video">
                 <Image
-                  src={avatar}
-                  alt="Event cover"
+                  src={project.image}
+                  alt={project.title}
                   fill
-                  placeholder="blur"
                   className="object-cover"
                 />
 
@@ -72,9 +72,9 @@ export default function Projects() {
                 </CardDescription>
               </CardHeader>
 
-              <CardFooter className="">
+              <CardFooter className="mt-auto">
                 <Button asChild className="w-full text-md py-4">
-                  <Link href={`/projects/${project.title}`}> View Details<ArrowRight /></Link>
+                  <Link href={`/projects/${project.slug}`}> View Details<ArrowRight /></Link>
                 </Button>
               </CardFooter>
 
@@ -82,9 +82,9 @@ export default function Projects() {
           )
         })}
       </div>
-      <div className="flex items-center justify-center">
-        <Button asChild className="mt-4 py-5 px-4"><Link href="/projects">
-        View All Projects <ArrowRight /></Link></Button>
+      <div className="flex items-center justify-center mt-6">
+        <Button asChild className="py-5 px-4"><Link href="/projects">
+          View All Projects <ArrowRight /></Link></Button>
       </div>
     </section>
   )

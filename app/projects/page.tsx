@@ -40,7 +40,7 @@ export default function () {
                                   src={project.image}
                                   alt={project.title}
                                   fill
-                                  className="object-cover grayscale dark:brightness-70 brightness-100 hover:grayscale-0 hover:brightness-100
+                                  className="object-cover
                                   hover:scale-[1.05]
                                   transition-all duration-500 "
                                 />

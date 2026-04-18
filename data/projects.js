@@ -24,7 +24,7 @@ export const projectList = [
   {
     title: "Developer Portfolio",
     slug: "developer-portfolio",
-    description: "A futuristic developer portfolio with glassmorphism UI and smooth animations lorem ajdhfdkjfdkljflkdjflkjasldkjflkadjfkljfkldsj.",
+    description: "A futuristic developer portfolio with glassmorphism UI and smooth animations",
     image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d",
     github: "https://github.com/yourusername/portfolio",
     live: "https://portfolio.vercel.app",
