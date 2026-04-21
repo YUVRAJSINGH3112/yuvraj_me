@@ -7,48 +7,48 @@ import avatar from "../../public/images/avatar.png"
 import { ArrowRight } from "lucide-react"
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiNextdotjs, SiMongodb, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { cn } from "@/lib/utils"
 
 export default function Hero() {
   return (
     <section className='hero mt-6' id='hero'>
-      <div className='flex items-center justify-center gap-2 mb-2'>
+      <div className={cn(
+        'flex items-center justify-center gap-2 mb-2',
+        'lg:justify-start gap-4'
+      )}>
         <div>
           <Image
             src={avatar}
             alt=""
             width={100}
             height={100}
-            className='h-30 w-30 rounded-[50%]'
+            className={cn(
+              'h-30 w-30 rounded-[50%]',
+              'lg:h-40 lg:w-40'
+            )}
             placeholder="blur"
           />
         </div>
         <div>
-          <h1 className="text-3xl font-extrabold">YUVRAJ SINGH</h1>
-          <h2 className="text-xl font-bold text-blue-400 uppercase tracking-tight">SOFTWARE DEVELOPER</h2>
+          <h1 className="text-3xl font-extrabold lg:text-6xl">YUVRAJ SINGH</h1>
+          <h2 className="text-xl font-bold text-blue-400 uppercase tracking-tight lg:text-3xl">SOFTWARE DEVELOPER</h2>
           <p className="flex items-center gap-1 text-md"><MapPin size={10} />Lucknow, Uttar Pradesh</p>
         </div>
       </div>
 
-      <p className="text-md text-center my-4 text-muted-foreground">Aspiring software developer with a strong foundation in programming and a passion for creating innovative solutions. Currently pursuing a Bachelor's degree in Computer Science, I am eager to apply my knowledge and skills to real-world projects and contribute to the tech industry.</p>
-      <div className="badge mt-2 grid gap-2 grid-cols-[repeat(auto-fit,minmax(160px,1fr))]">
-        <Button asChild variant="outline" className="mb-2 py-5 text-md border border-neutral-600 cursor-pointer">
+      <p className="text-md text-center my-4 text-muted-foreground lg:my-6">Aspiring software developer with a strong foundation in programming and a passion for creating innovative solutions. Currently pursuing a Bachelor's degree in Computer Science, I am eager to apply my knowledge and skills to real-world projects and contribute to the tech industry.</p>
+      <div className="badge mt-2 flex gap-2 sm:px-10 lg:gap-4 lg:pr-20">
+        <Button asChild variant="outline" className="mb-2 py-5 text-md border border-neutral-600 cursor-pointer grow">
           <a href="/new_resume_yuvraj.pdf" target="_blank" rel="noopener noreferrer">
             <FileText /> View CV
           </a>
         </Button>
-        <Button asChild className="mb-2 py-5 text-md dark:bg-white">
+        <Button asChild className="mb-2 py-5 text-md dark:bg-white grow">
           <Link href="/contact">
             <Send />
             Get in Touch
           </Link>
         </Button>
-
-        <div className="flex items-center gap-2" id="socials">
-          <Button asChild variant="outline" className="mb-2 py-6 px-4 rounded-full hover:bg-blue-500 transition-all ease-in duration-300"><a target="_blank" href="https://www.linkedin.com/in/yuvraj-singh-2b4a28280"><Linkedin size={30} /></a></Button>
-          <Button asChild variant="outline" className="mb-2 py-6 px-4 rounded-full hover:bg-blue-500 transition-all ease-in duration-300"><a target="_blank" href="https://github.com/YUVRAJSINGH3112"><Github size={30} /></a></Button>
-          <Button asChild variant="outline" className="mb-2 py-6 px-4 rounded-full hover:bg-blue-500 transition-all ease-in duration-300"><a target="_blank" href="mailto:yuvrajsingh3112s2@gmail.com"><Mail size={30} /></a></Button>
-        </div>
-
       </div>
 
       <div id="skills">

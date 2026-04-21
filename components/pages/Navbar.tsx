@@ -19,14 +19,21 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="p-3 flex justify-between items-center
-                    fixed top-0 left-0 right-0
-                    z-50
-                    border border-b-muted-foreground
-                    backdrop-blur-xl
-                    transition-all duration-300">
+    <nav className="
+  fixed top-0 left-0 right-0
+  z-50
+  backdrop-blur-xl
+">
 
-      <Link href="/">
+  <div className="
+    max-w-7xl mx-auto
+    lg:px-90
+    flex justify-between items-center
+    p-3
+    border-b border-muted-foreground
+  ">
+    
+          <Link href="/">
         <Avatar className="h-10 w-10 ring-1 ring-white/10">
           <AvatarImage src="/images/avatar.png" alt="Avatar" />
           <AvatarFallback>YS</AvatarFallback>
@@ -120,7 +127,9 @@ export default function Navbar() {
         </div>
 
       </div>
+    
+  </div>
 
-    </nav>
+</nav>
   )
 }
