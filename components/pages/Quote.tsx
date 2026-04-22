@@ -30,7 +30,7 @@ export default function Quote() {
   }, [])
 
   return (
-    <Card className="relative mx-auto w-full max-w-sm rounded-sm overflow-hidden">
+    <Card className="relative mx-auto w-full max-w-sm lg:max-w-lg rounded-sm overflow-hidden">
 
       {/* 🔥 Background Quote Icon */}
       <FaQuoteLeft className="absolute left-3 top-3 text-muted-foreground opacity-10 text-6xl" />

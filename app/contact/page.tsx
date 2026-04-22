@@ -46,8 +46,8 @@ export default function page() {
     return (
         <div>
             <Navbar />
-            <div className="flex flex-col justify-between min-h-screen pb-4 pt-20">
-                <div>
+            <div className="flex flex-col justify-between min-h-screen pb-4 pt-20 lg:px-90">
+                <div className='pb-14'>
                     <div className='px-4 mt-8 flex flex-col gap-2'>
                         <h2 className='font-extrabold text-4xl'>CONTACT ME</h2>
                         <p className='text-muted-foreground'>Have something in mind, or just want to say hello?</p>

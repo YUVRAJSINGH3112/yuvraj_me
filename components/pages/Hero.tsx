@@ -2,16 +2,16 @@ import { MapPin } from "lucide-react"
 import { Button } from "../ui/button";
 import Link from "next/link"
 import Image from "next/image"
-import { Linkedin, Github, Mail, Send, FileText } from "lucide-react"
+import { Send, FileText } from "lucide-react"
 import avatar from "../../public/images/avatar.png"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Linkedin, Github, Instagram } from "lucide-react"
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiNextdotjs, SiMongodb, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { cn } from "@/lib/utils"
 
 export default function Hero() {
   return (
-    <section className='hero mt-6' id='hero'>
+    <section className='hero mt-14' id='hero'>
       <div className={cn(
         'flex items-center justify-center gap-2 mb-2',
         'lg:justify-start gap-4'
@@ -37,7 +37,7 @@ export default function Hero() {
       </div>
 
       <p className="text-md text-center my-4 text-muted-foreground lg:my-6">Aspiring software developer with a strong foundation in programming and a passion for creating innovative solutions. Currently pursuing a Bachelor's degree in Computer Science, I am eager to apply my knowledge and skills to real-world projects and contribute to the tech industry.</p>
-      <div className="badge mt-2 flex gap-2 sm:px-10 lg:gap-4 lg:pr-20">
+      <div className="badge mt-2 flex gap-2 sm:px-10 lg:px-0 lg:w-sm lg:gap-4">
         <Button asChild variant="outline" className="mb-2 py-5 text-md border border-neutral-600 cursor-pointer grow">
           <a href="/new_resume_yuvraj.pdf" target="_blank" rel="noopener noreferrer">
             <FileText /> View CV
@@ -50,7 +50,43 @@ export default function Hero() {
           </Link>
         </Button>
       </div>
+      <div className="socials flex gap-4 my-4">
+        <a
+          href="https://www.linkedin.com/in/your-username"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+           p-2
+           border-black border rounded-full
+          hover:text-blue-500 transition"
+        >
+          <Linkedin size={20} />
+        </a>
 
+        <a
+          href="https://www.instagram.com/your-username"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+           p-2
+           border-black border rounded-full
+          hover:text-pink-500 transition"
+        >
+          <Instagram size={20} />
+        </a>
+
+        <a
+          href="https://github.com/your-username"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+           p-2
+          border-black border rounded-full
+          hover:text-gray-400 transition"
+        >
+          <Github size={20} />
+        </a>
+      </div>
       <div id="skills">
         <div className="my-6">
           <h4 className="leading-none text-muted-foreground">Technical</h4>
@@ -83,9 +119,9 @@ export default function Hero() {
           </Button>
         </div>
         <div className="flex items-center justify-center">
-        <Button asChild className="mt-4 py-5 px-8"><Link href="/skills">
-        Show all Skills <ArrowRight /></Link></Button>
-      </div>
+          <Button asChild className="mt-4 py-5 px-8"><Link href="/skills">
+            Show all Skills <ArrowRight /></Link></Button>
+        </div>
       </div>
     </section>
   )

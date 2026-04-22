@@ -1,5 +1,45 @@
 export const projectList = [
   {
+  title: "AlertX",
+  slug: "alertx",
+  description: "A real-time accident detection system that automatically notifies nearby hospitals and police with live location.",
+  longDescription: "AlertX is a real-time AI-powered accident detection and emergency response platform that leverages mobile accelerometer data to automatically identify crash incidents and instantly notify nearby emergency services. Built with a WebSocket-based architecture, the system ensures ultra-fast communication by transmitting the user's live location to hospitals and police authorities within a 10km radius, enabling rapid intervention and reducing response time in critical situations. AlertX continuously monitors a user's motion using device sensors such as the accelerometer to detect sudden impacts or abnormal movement patterns that may indicate an accident. Upon detection, the system triggers an automated emergency workflow that sends real-time alerts to nearby authorities through a WebSocket-based infrastructure. The platform includes dual dashboards—one for users and another for emergency responders—allowing seamless tracking, live location visualization, and instant action. By combining sensor intelligence, geolocation, and real-time communication, AlertX aims to create a faster and more reliable emergency response ecosystem.",  
+  image: "/images/Alertx.webp",
+  github: "https://github.com/YUVRAJSINGH3112/accident-detection",
+  live: "https://alertx.vercel.app",
+  tags: [
+    "AI",
+    "Real-time",
+    "WebSockets",
+    "Geolocation",
+    "Emergency Tech",
+    "Sensor Data"
+  ],
+  
+  features: [
+    "Accident detection using mobile accelerometer and motion analysis",
+    "Real-time alert system powered by WebSockets",
+    "Automatic live location sharing with authorities",
+    "10km radius-based smart emergency notification system",
+    "Dual dashboard for users and emergency responders",
+    "Instant emergency trigger without manual input",
+    "Low-latency communication for faster response time"
+  ],
+  
+  functionality: [
+    "Continuously monitors user motion using accelerometer data",
+    "Detects abnormal spikes or crash patterns",
+    "Triggers an emergency event upon detection",
+    "Sends real-time alerts via WebSocket to backend server",
+    "Filters and notifies nearby hospitals and police within 10km radius",
+    "Displays user’s live location on authority dashboard",
+    "Enables responders to track and reach the user quickly"
+  ],
+  
+  isFeatured: true,
+  type: "personal"
+},
+  {
     title: "AI Travel Assistant",
     slug: "ai-travel-assistant",
     description: "An AI-powered travel planner that generates itineraries and recommends destinations based on user preferences.",

@@ -26,11 +26,9 @@ export default function Navbar() {
 ">
 
   <div className="
-    max-w-7xl mx-auto
-    lg:px-90
     flex justify-between items-center
+    lg:px-90
     p-3
-    border-b border-muted-foreground
   ">
     
           <Link href="/">
