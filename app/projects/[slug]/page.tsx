@@ -67,7 +67,7 @@ export default async function Page({
                     <div>
                         <h1 className="text-2xl font-bold mb-2">Features:</h1>
                         <ul className="list-disc pl-5 space-y-1">
-                            {project.features.map((item, i) => (
+                            {project.features?.map((item, i) => (
                                 <li key={i}>{item}</li>
                             ))}
                         </ul>
@@ -76,7 +76,7 @@ export default async function Page({
                     <div>
                         <h1 className="text-2xl font-bold mb-2">Functionality:</h1>
                         <ul className="list-disc pl-5 space-y-1">
-                            {project.functionality.map((item, i) => (
+                            {project.functionality?.map((item, i) => (
                                 <li key={i}>{item}</li>
                             ))}
                         </ul>
