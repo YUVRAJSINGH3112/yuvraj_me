@@ -1,5 +1,5 @@
 export const projectList = [
-  {
+{
   title: "AlertX",
   slug: "alertx",
   description: "A real-time accident detection system that automatically notifies nearby hospitals and police with live location.",
@@ -39,40 +39,58 @@ export const projectList = [
   isFeatured: true,
   type: "personal"
 },
-  {
-    title: "AI Travel Assistant",
-    slug: "ai-travel-assistant",
-    description: "An AI-powered travel planner that generates itineraries and recommends destinations based on user preferences.",
-    image: "/images/travel.webp",
-    github: "https://github.com/yourusername/ai-travel-assistant",
-    live: "https://ai-travel-assistant.vercel.app",
-    tags: ["AI", "Travel", "Planning"],
-    isFeatured: true,
-    type: "personal"
-  },
-  {
-    title: "E-Commerce Store",
-    slug: "e-commerce-store",
-    description: "A modern e-commerce website with product listings, cart functionality, and responsive UI.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c",
-    github: "https://github.com/yourusername/ecommerce-store",
-    live: "https://ecommerce-store.vercel.app",
-    tags: ["E-commerce", "Shopping", "Online"],
-    isFeatured: true,
-    type: "client"
-  },
-  {
-    title: "Developer Portfolio",
-    slug: "developer-portfolio",
-    description: "A futuristic developer portfolio with glassmorphism UI and smooth animations",
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d",
-    github: "https://github.com/yourusername/portfolio",
-    live: "https://portfolio.vercel.app",
-    tags: ["Portfolio", "Developer", "Glassmorphism"],
-    isFeatured: true,
-    type: "personal"
-  },
-  {
+{
+  title: "Voxera",
+  slug: "voxera",
+  description: "A plug-and-play platform to build AI chatbots and voice agents with agentic actions.",
+  
+  longDescription: "Voxera is a next-generation AI platform designed to simplify the creation of intelligent chatbots and voice agents. It eliminates the complexity of building bots from scratch by providing a plug-and-play solution where developers can deploy powerful AI agents with minimal setup. Voxera supports agentic AI bots capable of performing tool-based actions and RAG-powered bots that leverage custom knowledge bases for context-aware responses. The platform integrates both chatbots and voicebots into a unified system, allowing seamless management through a centralized dashboard. With features like one-click AI model switching, multi-bot management, and real-time analytics, Voxera reduces development time and infrastructure overhead. It also addresses the limitations of traditional IVR systems by introducing agentic voicebots that can handle peak loads efficiently, ensuring a smooth and scalable user experience. Powered by modern AI technologies, Voxera aims to make advanced conversational AI accessible, scalable, and easy to integrate into any application.",
+
+  image: "/images/Voxera.png",
+  github: "",
+  live: "",
+
+  tags: [
+    "AI",
+    "Agentic AI",
+    "RAG",
+    "Voice AI",
+    "Chatbots",
+    "SaaS",
+    "WebSockets",
+    "Automation"
+  ],
+
+  features: [
+    "Agentic AI chatbots with tool-based action capabilities",
+    "Agentic AI voicebots as a scalable alternative to traditional IVR systems",
+    "RAG-powered bots using custom knowledge bases",
+    "Plug-and-play chatbot and voicebot integration",
+    "One-click AI model switching without additional configuration",
+    "Support for multiple AI models",
+    "Unified dashboard for managing chat and voice bots",
+    "Per-user conversation tracking and session history",
+    "Advanced analytics and real-time monitoring",
+    "Ability to create, deploy, and manage multiple bots simultaneously"
+  ],
+
+  functionality: [
+    "Users create a bot using the Voxera platform dashboard",
+    "Add a custom knowledge base to enable RAG-based responses",
+    "Select or switch AI models with a single click",
+    "Integrate the bot into applications using a simple component or API",
+    "Chatbots and voicebots interact with users in real time",
+    "Voice input is converted to text using speech recognition systems",
+    "AI processes queries and generates context-aware responses",
+    "Responses are delivered as text or converted into voice output",
+    "All interactions are tracked and analyzed in the dashboard",
+    "Supports scaling across multiple bots and high user traffic scenarios"
+  ],
+
+  isFeatured: true,
+  type: "personal"
+},
+{
     title: "Task Management App",
     slug: "task-management-app",
     description: "A productivity app that allows users to manage tasks, deadlines, and track progress.",
@@ -82,7 +100,7 @@ export const projectList = [
     tags: [],
     isFeatured: false,
     type: "client"
-  },
+},
   {
     title: "Real Estate Platform",
     slug: "real-estate-platform",
