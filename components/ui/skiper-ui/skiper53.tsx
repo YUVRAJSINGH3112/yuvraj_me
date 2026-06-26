@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/effect-creative";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-
+import LeetCodeStats from "@/components/ui/LeetCodeStats";
 
 import { cn } from "@/lib/utils";
 import {
@@ -122,11 +122,7 @@ const HoverExpand_002 = ({
                 </CardHeader>
                 <CardContent className="h-full">
                   <div className="flex justify-center">
-                    <img
-                      src="https://leetcard.jacoblin.cool/yuvrajsingh3112?ext=heatmap"
-                      alt="LeetCode Stats"
-                      className="w-full h-auto "
-                    />
+                    <LeetCodeStats />
                   </div>
                 </CardContent>
               </Card>

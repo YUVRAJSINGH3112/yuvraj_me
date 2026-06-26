@@ -5,8 +5,8 @@ import Image from "next/image"
 import { Send, FileText } from "lucide-react"
 import avatar from "../../public/images/avatar.png"
 import { ArrowRight, Linkedin, Github, Instagram } from "lucide-react"
-import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiNextdotjs, SiMongodb, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { FaReact, FaNodeJs, FaJava } from "react-icons/fa";
+import { SiNextdotjs, SiMongodb, SiTailwindcss, SiTypescript, SiSpringboot, SiJavascript } from "react-icons/si";
 import { cn } from "@/lib/utils"
 
 export default function Hero() {
@@ -19,7 +19,7 @@ export default function Hero() {
         <div>
           <Image
             src={avatar}
-            alt=""
+            alt="Hero-Section image"
             width={100}
             height={100}
             className={cn(
@@ -31,7 +31,7 @@ export default function Hero() {
         </div>
         <div>
           <h1 className="text-3xl font-extrabold lg:text-6xl">YUVRAJ SINGH</h1>
-          <h2 className="text-xl font-bold text-blue-400 uppercase tracking-tight lg:text-3xl">SOFTWARE DEVELOPER</h2>
+          <h2 className="text-xl font-bold text-blue-400 uppercase tracking-tight lg:text-3xl">SOFTWARE ENGINEER</h2>
           <p className="flex items-center gap-1 text-md"><MapPin size={10} />Lucknow, Uttar Pradesh</p>
         </div>
       </div>
@@ -88,11 +88,29 @@ export default function Hero() {
         </a>
       </div>
       <div id="skills">
+
         <div className="my-6">
           <h4 className="leading-none text-muted-foreground">Technical</h4>
           <h2 className="text-3xl font-extrabold leading-tight">SKILLS</h2>
         </div>
+
         <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-2">
+
+          <Button variant="outline" className="w-full flex items-center gap-2 rounded-sm">
+            <FaJava /> Java
+          </Button>
+
+          <Button variant="outline" className="w-full flex items-center gap-2 rounded-sm">
+            <SiSpringboot /> Spring Boot
+          </Button>
+
+          <Button variant="outline" className="w-full flex items-center gap-2 rounded-sm">
+            <SiJavascript/> JavaScript
+          </Button>
+
+          <Button variant="outline" className="w-full flex items-center gap-2 rounded-sm">
+            <SiTypescript /> TypeScript
+          </Button>
 
           <Button variant="outline" className="w-full flex items-center gap-2 rounded-sm">
             <FaReact /> React
@@ -111,17 +129,25 @@ export default function Hero() {
           </Button>
 
           <Button variant="outline" className="w-full flex items-center gap-2 rounded-sm">
-            <SiTailwindcss /> Tailwind CSS
+            <SiTailwindcss />MySQL
+          </Button>
+          <Button variant="outline" className="w-full flex items-center gap-2 rounded-sm">
+            <SiTailwindcss />AWS
+          </Button>
+          <Button variant="outline" className="w-full flex items-center gap-2 rounded-sm">
+            <SiTailwindcss />Docker
+          </Button>
+          <Button variant="outline" className="w-full flex items-center gap-2 rounded-sm">
+            <SiTailwindcss />Linux
           </Button>
 
-          <Button variant="outline" className="w-full flex items-center gap-2 rounded-sm">
-            <SiTypescript /> TypeScript
-          </Button>
         </div>
+
         <div className="flex items-center justify-center">
           <Button asChild className="mt-4 py-5 px-8"><Link href="/skills">
             Show all Skills <ArrowRight /></Link></Button>
         </div>
+
       </div>
     </section>
   )

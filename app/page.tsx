@@ -17,7 +17,6 @@ export default function page() {
       <div className="p-4 pt-20">
          <Hero/>
          <Projects/>
-         <Coding/>
          <Others/>
          <Contact/>
          <Quote/>

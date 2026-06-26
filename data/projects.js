@@ -47,8 +47,8 @@ export const projectList = [
   longDescription: "Voxera is a next-generation AI platform designed to simplify the creation of intelligent chatbots and voice agents. It eliminates the complexity of building bots from scratch by providing a plug-and-play solution where developers can deploy powerful AI agents with minimal setup. Voxera supports agentic AI bots capable of performing tool-based actions and RAG-powered bots that leverage custom knowledge bases for context-aware responses. The platform integrates both chatbots and voicebots into a unified system, allowing seamless management through a centralized dashboard. With features like one-click AI model switching, multi-bot management, and real-time analytics, Voxera reduces development time and infrastructure overhead. It also addresses the limitations of traditional IVR systems by introducing agentic voicebots that can handle peak loads efficiently, ensuring a smooth and scalable user experience. Powered by modern AI technologies, Voxera aims to make advanced conversational AI accessible, scalable, and easy to integrate into any application.",
 
   image: "/images/Voxera.png",
-  github: "",
-  live: "",
+  github: "ttps://github.com/YUVRAJSINGH3112/voxera-frontend",
+  live: "https://splendorous-blancmange-eaa8bd.netlify.app/",
 
   tags: [
     "AI",
@@ -91,80 +91,99 @@ export const projectList = [
   type: "personal"
 },
 {
-    title: "Task Management App",
-    slug: "task-management-app",
-    description: "A productivity app that allows users to manage tasks, deadlines, and track progress.",
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b",
-    github: "https://github.com/yourusername/task-manager",
-    live: "https://task-manager.vercel.app",
-    tags: [],
-    isFeatured: false,
-    type: "client"
+  title: "Developer Portfolio",
+  slug: "developer-portfolio",
+  description: "A modern developer portfolio showcasing projects, skills, and achievements with a sleek futuristic UI and smooth user experience.",
+
+  longDescription: "Developer Portfolio is a fully responsive and visually engaging personal website designed to showcase projects, technical skills, and achievements in a modern and interactive way. Built with a focus on clean UI/UX and performance, the portfolio features a futuristic glassmorphism design with smooth animations and dynamic components. It serves as a centralized platform for presenting work, including detailed project pages, live demos, and GitHub integrations. The portfolio is optimized for all devices, ensuring a seamless experience across desktop and mobile. With reusable components, modular architecture, and scalable design, it allows easy updates and customization. The goal of this project is to create a strong personal brand presence while demonstrating frontend development expertise and design sensibility.",
+
+  image: "/images/avatar.png",
+  github: "",
+  live: "",
+
+  tags: [
+    "Frontend",
+    "React",
+    "Portfolio",
+    "UI/UX",
+    "Responsive Design",
+    "Animations",
+    "Web Development"
+  ],
+
+  features: [
+    "Modern futuristic glassmorphism UI design",
+    "Fully responsive across all screen sizes",
+    "Dynamic project showcase with detailed pages",
+    "Smooth animations and transitions for better UX",
+    "Reusable and modular component architecture",
+    "Integrated GitHub and live project links",
+    "Dark theme optimized for aesthetics and readability",
+    "Fast loading and performance optimized",
+    "Custom sections for skills, projects, and achievements"
+  ],
+
+  functionality: [
+    "Displays developer information, skills, and experience",
+    "Showcases projects with detailed descriptions and links",
+    "Allows users to explore live demos and GitHub repositories",
+    "Implements smooth scrolling and interactive UI elements",
+    "Adapts layout dynamically for mobile and desktop devices",
+    "Uses reusable components for scalability and maintainability",
+    "Handles navigation between sections seamlessly",
+    "Optimized for performance and quick loading",
+    "Provides a visually engaging experience to visitors"
+  ],
+
+  isFeatured: false,
+  type: "personal"
 },
-  {
-    title: "Real Estate Platform",
-    slug: "real-estate-platform",
-    description: "A property listing platform where users can explore houses, apartments, and real estate investments.",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa",
-    github: "https://github.com/yourusername/real-estate",
-    live: "https://real-estate.vercel.app",
-    tags: [],
-    isFeatured: false,
-    type: "client"
-  },
-  {
-    title: "AI Chatbot",
-    slug: "ai-chatbot",
-    description: "An intelligent chatbot built using modern AI APIs for automated conversations and support.",
-    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a",
-    github: "https://github.com/yourusername/ai-chatbot",
-    live: "https://ai-chatbot.vercel.app",
-    tags: [],
-    isFeatured: false,
-    type: "personal"
-  },
-  {
-    title: "Fitness Tracker",
-    slug: "fitness-tracker",
-    description: "A web app to track workouts, monitor progress, and maintain fitness routines.",
-    image: "https://images.unsplash.com/photo-1571019613914-85f342c1d4b6",
-    github: "https://github.com/yourusername/fitness-tracker",
-    live: "https://fitness-tracker.vercel.app",
-    tags: [],
-    isFeatured: false,
-    type: "personal"
-  },
-  {
-    title: "Blog Platform",
-    slug: "blog-platform",
-    description: "A modern blogging platform where users can create, edit, and publish articles.",
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643",
-    github: "https://github.com/yourusername/blog-platform",
-    live: "https://blog-platform.vercel.app",
-    tags: [],
-    isFeatured: false,
-    type: "client"
-  },
-  {
-    title: "Weather Dashboard",
-    slug: "weather-dashboard",
-    description: "A weather forecasting dashboard displaying real-time weather data for multiple cities.",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
-    github: "https://github.com/yourusername/weather-dashboard",
-    live: "https://weather-dashboard.vercel.app",
-    tags: [],
-    isFeatured: false,
-    type: "personal"
-  },
-  {
-    title: "Learning Management System",
-    slug: "learning-management-system",
-    description: "An LMS platform where students can access courses, track progress, and complete assignments.",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
-    github: "https://github.com/yourusername/lms-platform",
-    live: "https://lms-platform.vercel.app",
-    tags: [],
-    isFeatured: false,
-    type: "client"
-  }
+{
+  title: "DonateHub",
+  slug: "donatehub",
+  description: "A secure and user-friendly donation platform with Razorpay integration for seamless online contributions.",
+
+  longDescription: "DonateHub is a modern web-based donation platform designed to simplify the process of contributing to meaningful causes. It enables users to donate securely through an integrated payment gateway, ensuring fast and reliable transactions. The platform focuses on creating a seamless and trustworthy experience by offering a clean interface, transparent donation tracking, and instant payment confirmation. With Razorpay integration, users can donate using multiple payment methods including UPI, cards, and net banking. The system is built with scalability in mind, allowing organizations to manage campaigns, track contributions, and analyze donation trends. DonateHub aims to bridge the gap between donors and causes by providing a simple, secure, and efficient digital donation ecosystem.",
+
+  image: "/images/DonateHub.png",
+  github: "https://github.com/YUVRAJSINGH3112/Donation-Website-Project",
+  live: "",
+
+  tags: [
+    "Web Development",
+    "Payment Gateway",
+    "Razorpay",
+    "Full Stack",
+    "FinTech",
+    "Donations",
+    "Secure Payments"
+  ],
+
+  features: [
+    "Secure online donations using  integration",
+    "Support for multiple payment methods (UPI, cards, net banking, wallets)",
+    "Clean and user-friendly donation interface",
+    "Real-time payment status and confirmation",
+    "Donation history tracking for users",
+    "Campaign-based donation system",
+    "Responsive design for all devices",
+    "Secure transaction handling and validation",
+    "Scalable backend for managing donations and users"
+  ],
+
+  functionality: [
+    "Users browse available donation campaigns",
+    "Select a cause and enter donation amount",
+    "Initiate payment through Razorpay checkout",
+    "Process payment securely via Razorpay gateway",
+    "Receive instant payment confirmation",
+    "Store transaction details in backend database",
+    "Allow users to view their donation history",
+    "Enable admins to track and manage donations",
+    "Provide analytics on total donations and campaign performance"
+  ],
+
+  isFeatured: false,
+  type: "personal"
+}
 ];
