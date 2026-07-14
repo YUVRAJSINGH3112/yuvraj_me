@@ -2,10 +2,17 @@
 
 import { motion } from "framer-motion";
 import { GripHorizontal, RefreshCcw } from "lucide-react";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import { flushSync } from "react-dom";
 
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
+
+type ViewTransitionDocument = Document & {
+  startViewTransition?: (callback: () => void) => {
+    ready: Promise<void>;
+  };
+};
 
 const Skiper4 = () => {
   const [scale, setScale] = useState(0);
@@ -199,17 +206,75 @@ export const ThemeToggleButton= ({
 }: {
   className?: string;
 }) => {
-  const { theme, setTheme } = useTheme()
-  const isDark = theme === "dark"
+  const { resolvedTheme, setTheme } = useTheme()
+  const isDark = resolvedTheme === "dark"
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  const toggleTheme = () => {
+    const currentIsDark =
+      resolvedTheme === "dark" ||
+      (!resolvedTheme && document.documentElement.classList.contains("dark"));
+    const nextTheme = currentIsDark ? "light" : "dark";
+    const button = buttonRef.current;
+    const startViewTransition = (document as ViewTransitionDocument)
+      .startViewTransition;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    if (!button || !startViewTransition || prefersReducedMotion) {
+      setTheme(nextTheme);
+      return;
+    }
+
+    const rect = button.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+    const endRadius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y),
+    );
+
+    const transition = startViewTransition.call(document, () => {
+      flushSync(() => {
+        setTheme(nextTheme);
+      });
+    });
+
+    transition.ready
+      .then(() => {
+        const animationOptions: KeyframeAnimationOptions & {
+          pseudoElement: string;
+        } = {
+          duration: 950,
+          easing: "cubic-bezier(0.25, 1, 0.35, 1)",
+          pseudoElement: "::view-transition-new(root)",
+        };
+
+        document.documentElement.animate(
+          {
+            clipPath: [
+              `circle(0px at ${x}px ${y}px)`,
+              `circle(${endRadius}px at ${x}px ${y}px)`,
+            ],
+          },
+          animationOptions,
+        );
+      })
+      .catch(() => {
+        setTheme(nextTheme);
+      });
+  };
+
   return (
     <button
+      ref={buttonRef}
       type="button"
       className={cn(
-        "rounded-full transition-all duration-300 active:scale-95",
-        isDark ? "bg-black text-white" : "bg-white text-black",
+        "rounded-full border border-black/10 bg-white text-black shadow-[0_8px_24px_rgba(0,0,0,0.16)] transition-all duration-300 hover:shadow-[0_10px_28px_rgba(0,0,0,0.22)] active:scale-95 dark:border-white/10 dark:bg-black dark:text-white dark:shadow-[0_8px_24px_rgba(255,255,255,0.12)] dark:hover:shadow-[0_10px_28px_rgba(255,255,255,0.16)]",
         className,
       )}
-      onClick={() => setTheme(isDark ? "light" : "dark")}
+      onClick={toggleTheme}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -221,14 +286,14 @@ export const ThemeToggleButton= ({
         <clipPath id="skiper-btn-2">
           <motion.path
             animate={{ y: isDark ? 10 : 0, x: isDark ? -12 : 0 }}
-            transition={{ ease: "easeInOut", duration: 0.35 }}
+            transition={{ ease: "easeInOut", duration: 0.55 }}
             d="M0-5h30a1 1 0 0 0 9 13v24H0Z"
           />
         </clipPath>
         <g clipPath="url(#skiper-btn-2)">
           <motion.circle
             animate={{ r: isDark ? 10 : 8 }}
-            transition={{ ease: "easeInOut", duration: 0.35 }}
+            transition={{ ease: "easeInOut", duration: 0.55 }}
             cx="16"
             cy="16"
           />
@@ -238,7 +303,7 @@ export const ThemeToggleButton= ({
               scale: isDark ? 0.5 : 1,
               opacity: isDark ? 0 : 1,
             }}
-            transition={{ ease: "easeInOut", duration: 0.35 }}
+            transition={{ ease: "easeInOut", duration: 0.55 }}
             stroke="currentColor"
             strokeWidth="1.5"
           >

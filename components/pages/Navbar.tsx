@@ -10,7 +10,6 @@ import {
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
@@ -43,13 +42,12 @@ export default function Navbar() {
         <ThemeToggleButton className="h-10 w-10 p-2" />
 
         <div
-          onClick={() => setIsOpen(!isOpen)}
           className="h-10 w-10 flex items-center justify-center 
           bg-secondary border border-white/10 rounded-lg 
           cursor-pointer hover:bg-white/15 transition-all active:scale-95"
         >
 
-          <DropdownMenu onOpenChange={setIsOpen}>
+          <DropdownMenu modal={false} open={isOpen} onOpenChange={setIsOpen}>
 
             <DropdownMenuTrigger asChild>
 
