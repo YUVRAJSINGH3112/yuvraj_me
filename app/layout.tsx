@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import PageTransition from "@/components/PageTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,10 +35,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-       className={hanken.className}
+        className={hanken.className}
       >
         <ThemeProvider attribute="class">
-          {children}
+          <PageTransition>{children}</PageTransition>
         </ThemeProvider>
       </body>
     </html>
