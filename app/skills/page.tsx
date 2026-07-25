@@ -1,4 +1,5 @@
 import Navbar from "@/components/pages/Navbar";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardAction,
@@ -194,18 +195,19 @@ export default function Skills() {
                   </CardAction>
                 </CardHeader>
 
-                <CardContent className="flex flex-wrap gap-2 px-5 pb-5 sm:px-6 sm:pb-6">
+                <CardContent className="grid grid-cols-2 gap-2 px-5 pb-5 sm:px-6 sm:pb-6">
                   {group.skills.map((skill) => {
                     const SkillIcon = skill.icon;
 
                     return (
-                      <div
+                      <Button
                         key={skill.name}
-                        className="flex items-center gap-2 rounded-lg border border-border bg-background px-3 py-2 text-sm font-medium transition-transform duration-200 hover:-translate-y-0.5"
+                        variant="outline"
+                        className="h-8 min-w-0 w-full justify-center gap-1.5 overflow-hidden rounded-sm px-2 text-xs"
                       >
                         <SkillIcon className={`size-4 ${skill.color}`} aria-hidden="true" />
-                        <span>{skill.name}</span>
-                      </div>
+                        <span className="truncate">{skill.name}</span>
+                      </Button>
                     );
                   })}
                 </CardContent>

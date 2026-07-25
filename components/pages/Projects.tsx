@@ -16,6 +16,7 @@ import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import ProjectTechnologies from "@/components/pages/ProjectTechnologies"
 
 export default function Projects() {
 
@@ -71,6 +72,8 @@ export default function Projects() {
                   {project.description}
                 </CardDescription>
               </CardHeader>
+
+              <ProjectTechnologies slug={project.slug} />
 
               <CardFooter className="mt-auto">
                 <Button asChild className="w-full text-md py-4">

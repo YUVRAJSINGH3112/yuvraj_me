@@ -57,7 +57,7 @@ export default function Hero() {
           rel="noopener noreferrer"
           className="
            p-2
-           border-black border rounded-full
+           border-primary border rounded-full
           hover:text-blue-500 transition"
         >
           <Linkedin size={20} />
@@ -69,7 +69,7 @@ export default function Hero() {
           rel="noopener noreferrer"
           className="
            p-2
-           border-black border rounded-full
+           border-primary border rounded-full
           hover:text-pink-500 transition"
         >
           <Instagram size={20} />
@@ -81,13 +81,13 @@ export default function Hero() {
           rel="noopener noreferrer"
           className="
            p-2
-          border-black border rounded-full
+          border-primary border rounded-full
           hover:text-gray-400 transition"
         >
           <Github size={20} />
         </a>
       </div>
-      <div id="skills">
+      <div id="skills" className="my-20">
 
         <div className="my-6">
           <h4 className="leading-none text-muted-foreground">Technical</h4>

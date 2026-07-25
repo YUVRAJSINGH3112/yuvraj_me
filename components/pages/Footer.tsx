@@ -3,7 +3,7 @@ type FooterProps = {
 }
 export default function Footer({ className }: FooterProps) {
   return (
-    <div className={`mt-6 ${className}`}>
+    <div className={`my-6 ${className}`}>
       <p className="text-muted-foreground text-sm text-center">
         Designed and Developed by Yuvraj Singh
       </p>

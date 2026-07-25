@@ -5,6 +5,7 @@ export const metadata = {
 
 import Navbar from "@/components/pages/Navbar"
 import ProjectTab from "@/components/pages/ProjectTab"
+import ProjectTechnologies from "@/components/pages/ProjectTechnologies"
 import { projectList } from "@/data/projects"
 import {
   Card,
@@ -60,6 +61,8 @@ export default function () {
                                   {project.description}
                                 </CardDescription>
                               </CardHeader>
+
+                              <ProjectTechnologies slug={project.slug} />
                 
                               <CardFooter className="mt-auto">
                                 <Button asChild className="w-full text-md py-4">
