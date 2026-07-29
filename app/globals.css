@@ -146,3 +146,38 @@ html{
     @apply font-sans;
   }
 }
+
+@layer utilities {
+  .page-shell {
+    @apply relative min-h-screen bg-background;
+  }
+
+  .page-shell::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at top left, color-mix(in oklab, var(--color-chart-1) 18%, transparent) 0, transparent 34%),
+      radial-gradient(circle at 85% 18%, color-mix(in oklab, var(--color-chart-2) 14%, transparent) 0, transparent 26%),
+      linear-gradient(180deg, color-mix(in oklab, var(--background) 92%, var(--foreground) 8%) 0%, var(--background) 38%);
+    opacity: 0.9;
+    z-index: -1;
+  }
+
+  .content-wrap {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-frame {
+    @apply rounded-[2rem] border border-border/70 bg-background/75 shadow-[0_18px_60px_-40px_rgba(15,23,42,0.4)] backdrop-blur-sm;
+  }
+
+  .section-heading-kicker {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-blue-500;
+  }
+
+  .section-heading-title {
+    @apply text-3xl font-extrabold tracking-tight sm:text-4xl;
+  }
+}

@@ -20,34 +20,46 @@ export default async function Page({
         return <div>Project not found</div>
     }
     return (
-        <div>
+        <div className="bg-background">
             <Navbar />
-            <div className="p-4 pt-28">
+            <div className="min-h-screen px-4 pb-10 pt-24 lg:px-90 lg:pt-28">
                 <Button asChild variant="outline">
                     <Link href="/projects"><CornerUpLeft /> Back to projects</Link>
                 </Button>
-                <div className="my-10 flex flex-col gap-4">
-                    <div className="relative aspect-video">
+                <div className="my-10 flex flex-col gap-6">
+                    <div className="relative mx-auto h-[220px] w-full max-w-4xl overflow-hidden rounded-2xl border border-border bg-secondary/40 sm:h-[300px] md:h-[360px]">
                         <Image
                             src={project.image}
                             alt={project.title}
                             fill
-                            className="object-cover
-                                            hover:scale-[1.05]
-                                            transition-all duration-500
-                                            rounded-md "
+                            className="object-cover transition-transform duration-500 hover:scale-[1.03]"
                         />
                     </div>
-                    <div>
-                        <h1 className="text-white text-4xl uppercase font-extrabold">{project.title}</h1>
-                        <h1 className="text-muted-foreground">{project.longDescription}</h1>
+
+                    <div className="mx-auto w-full max-w-4xl">
+                        <h1 className="text-3xl font-extrabold uppercase tracking-tight text-foreground sm:text-4xl">
+                            {project.title}
+                        </h1>
+                        <p className="mt-4 text-sm leading-7 text-muted-foreground sm:text-base">
+                            {project.longDescription}
+                        </p>
                     </div>
-                    <div className="buttons w-full flex gap-4">
-                        <Button className="py-4 px-6" ><Globe />Live Demo</Button>
-                        <Button asChild className="py-4 px-6" variant="secondary"><a href={project.github} target="_blank"><Github />Source Code</a></Button>
+
+                    <div className="mx-auto flex w-full max-w-4xl flex-col gap-3 sm:flex-row">
+                        <Button className="h-11 w-full px-6 sm:w-auto" >
+                            <Globe />
+                            Live Demo
+                        </Button>
+                        <Button asChild className="h-11 w-full px-6 sm:w-auto" variant="secondary">
+                            <a href={project.github} target="_blank" rel="noopener noreferrer">
+                                <Github />
+                                Source Code
+                            </a>
+                        </Button>
                     </div>
                 </div>
-                <div className="flex flex-col gap-6 mb-10">
+
+                <div className="mx-auto mb-10 flex w-full max-w-4xl flex-col gap-6">
                     <div>
                         <h1 className="text-2xl font-bold mb-5">Tags:</h1>
                         <div className="tags flex flex-wrap gap-3">

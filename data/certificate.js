@@ -35,6 +35,15 @@ const certificates = [
     credentialLink: "#",
     credId:"465A4112084C",
   },
+  {
+    id: 5,
+    title: "Software Engineering Certificate",
+    issuer: "HackerRank",
+    date: "2024",
+    image: "/certificates/javascript.jpg",
+    credentialLink: "#",
+    credId:"465A4112084C",
+  },
 ];
 
 export default certificates;

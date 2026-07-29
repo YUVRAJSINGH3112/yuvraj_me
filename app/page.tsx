@@ -12,9 +12,9 @@ import Hero from "@/components/pages/Hero"
 import Others from "@/components/pages/Others";
 export default function page() {
   return (
-    <div className= "h-full lg:px-90 bg-background">
+    <div className="h-full bg-background">
       <Navbar/>
-      <div className="p-4 pt-20">
+      <div className="p-4 pt-20 lg:px-90">
          <Hero/>
          <Projects/>
          <Others/>

@@ -40,6 +40,81 @@ export const projectList = [
   type: "personal"
 },
 {
+  title: "FoodEase",
+  slug: "foodease",
+  description: "A scalable cloud-based food ordering platform with real-time order management, secure authentication, and AWS deployment.",
+  
+  longDescription:
+    "FoodEase is a full-stack cloud-native food ordering platform inspired by modern food delivery applications. It enables users to browse restaurants, explore menus, place orders, and manage their profiles through a responsive and intuitive interface. The platform is built using a scalable microservice-ready architecture and deployed entirely on AWS cloud infrastructure to ensure high availability, reliability, and seamless performance. The application leverages Amazon EC2 for backend hosting, Amazon S3 for frontend hosting, Nginx as a reverse proxy, PM2 for process management, MongoDB Atlas for cloud database management, and GitHub Actions for automated CI/CD deployment. FoodEase incorporates JWT-based authentication, role-based access control, secure REST APIs, and optimized cloud deployment practices, making it production-ready and capable of handling large-scale traffic efficiently.",
+  
+  image: "/images/FoodEase.webp",
+  
+  github: "https://github.com/YUVRAJSINGH3112/foodease",
+  live: "https://foodease.yourdomain.com",
+
+  tags: [
+    "AWS",
+    "Cloud",
+    "React",
+    "Node.js",
+    "MongoDB",
+    "Express.js",
+    "JWT",
+    "CI/CD",
+    "Scalable Architecture",
+    "DevOps"
+  ],
+
+  features: [
+    "Responsive Swiggy-inspired modern user interface",
+    "Secure JWT authentication and authorization",
+    "Restaurant and menu browsing system",
+    "Cloud-hosted backend on Amazon EC2",
+    "Frontend hosted using Amazon S3",
+    "Automated deployment with GitHub Actions (CI/CD)",
+    "Nginx reverse proxy with PM2 process management",
+    "MongoDB Atlas cloud database integration",
+    "RESTful API architecture",
+    "Highly scalable cloud deployment on AWS"
+  ],
+
+  functionality: [
+    "Allows users to register and securely log in",
+    "Displays restaurants and categorized food menus",
+    "Enables users to browse and place food orders",
+    "Authenticates users using JWT-based security",
+    "Processes client requests through Express REST APIs",
+    "Stores application data in MongoDB Atlas",
+    "Serves frontend from Amazon S3",
+    "Hosts backend services on Amazon EC2",
+    "Uses Nginx as a reverse proxy for efficient request routing",
+    "Maintains backend processes using PM2",
+    "Automatically deploys new code through GitHub Actions CI/CD pipeline",
+    "Supports scalable cloud infrastructure for production workloads"
+  ],
+
+  skills: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB Atlas",
+    "JWT Authentication",
+    "REST APIs",
+    "AWS EC2",
+    "AWS S3",
+    "Nginx",
+    "PM2",
+    "GitHub Actions",
+    "CI/CD",
+    "Cloud Deployment",
+    "DevOps",
+    "Scalable Architecture"
+  ],
+
+  isFeatured: true,
+  type: "personal"
+},
+{
   title: "Voxera",
   slug: "voxera",
   description: "A plug-and-play platform to build AI chatbots and voice agents with agentic actions.",

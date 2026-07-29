@@ -1,6 +1,18 @@
 import type { IconType } from "react-icons";
-import { FaCss3Alt, FaHtml5, FaReact } from "react-icons/fa";
-import { SiJavascript, SiNextdotjs, SiOpenai, SiRazorpay, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { FaAws, FaCss3Alt, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
+import {
+  SiExpress,
+  SiGithubactions,
+  SiJavascript,
+  SiJsonwebtokens,
+  SiMongodb,
+  SiNextdotjs,
+  SiNginx,
+  SiOpenai,
+  SiRazorpay,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 
 type Technology = {
   name: string;
@@ -17,6 +29,16 @@ const technologiesByProject: Record<string, Technology[]> = {
     { name: "React", icon: FaReact, color: "text-cyan-400" },
     { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
     { name: "OpenAI", icon: SiOpenai, color: "text-emerald-500" },
+  ],
+  foodease: [
+    { name: "React", icon: FaReact, color: "text-cyan-400" },
+    { name: "Node.js", icon: FaNodeJs, color: "text-green-500" },
+    { name: "Express.js", icon: SiExpress, color: "text-foreground" },
+    { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
+    { name: "JWT", icon: SiJsonwebtokens, color: "text-pink-500" },
+    { name: "AWS", icon: FaAws, color: "text-orange-400" },
+    { name: "Nginx", icon: SiNginx, color: "text-green-600" },
+    { name: "GitHub Actions", icon: SiGithubactions, color: "text-blue-500" },
   ],
   "developer-portfolio": [
     { name: "React", icon: FaReact, color: "text-cyan-400" },
