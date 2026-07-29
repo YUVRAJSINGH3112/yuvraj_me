@@ -18,35 +18,35 @@ export default function Contact() {
             <h4 className="leading-none text-muted-foreground">Get in</h4>
             <h2 className="text-3xl font-extrabold leading-tight">CONTACT</h2>
         </div>
-        <div className="flex flex-col gap-4 sm:flex-row">
-            <Card className="mx-auto w-full max-w-sm">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-stretch">
+            <Card className="mx-auto flex w-full max-w-sm flex-1 flex-col">
                 <CardHeader>
                     <CardTitle className="text-xl font-extrabold">CONTACT ME</CardTitle>
                     <CardDescription className="">
                      Feel free to reach out for collaborations, hackathons, or just to connect! I'm always excited to work on innovative projects.
                     </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-1">
                     <div className="flex flex-col gap-2">
                         <div className="flex items-center gap-2"><Mail size={15}/> <p>yuvrajsingh3112s@gmail.com</p></div>
                         <div className="flex items-center gap-2"><Mail size={15}/> +91 9555103969</div>
                         <div className="flex items-center gap-2"><MapPin size={15}/> Lucknow, Uttar Pradesh</div>
                     </div>
                 </CardContent>
-                <CardFooter>
+                <CardFooter className="mt-auto">
                     <Button asChild className="w-full">
                         <Link href="/contact"><Send size={15}/> Send Message</Link>
                     </Button>
                 </CardFooter>
             </Card>
-            <Card className="mx-auto w-full max-w-sm">
+            <Card className="mx-auto flex w-full max-w-sm flex-1 flex-col">
                 <CardHeader>
                     <CardTitle className="text-xl font-extrabold">LET'S CONNECT</CardTitle>
                     <CardDescription className="">
                     I'm always interested in hearing about new opportunities, collaborations, or just having a chat about technology and development!
                     </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-1">
                    <div className="">
                     Available for:
                     <ul className="list-disc pl-5 mb-4">
